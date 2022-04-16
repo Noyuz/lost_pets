@@ -1,0 +1,7 @@
+<% @pets.each do |pet| %>
+  <%= link_to pet_path(pet) do %>
+    <h1><%= pet.name %> <%= pet.found_days_ago %> <%= link_to 'delete', pet_path(pet), method: :delete %></h1>
+  <% end %>
+<% end %>
+
+<%= link_to "add a pet", new_pet_path  %>
